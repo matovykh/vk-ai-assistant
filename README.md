@@ -25,8 +25,6 @@ The project follows the separation-of-concerns principle:
 
 ### Message processing flow
 
-
-
 ```
 VK Callback API → /vk/callback → secret validation
    → confirmation / message_new
@@ -46,8 +44,6 @@ VK Callback API → /vk/callback → secret validation
 
 bash
 
-
-
 ```bash
 git clone https://github.com/your-username/vk-ai-assistant.git
 cd vk-ai-assistant
@@ -59,8 +55,6 @@ pip install -r requirements.txt
 ```
 
 Example `requirements.txt`:
-
-
 
 ```
 fastapi
@@ -75,8 +69,6 @@ python-dotenv
 Create a `.env` file in the project root:
 
 env
-
-
 
 ```env
 # OpenAI
@@ -107,8 +99,6 @@ APP_PORT=8000
 ### Running
 
 bash
-
-
 
 ```bash
 uvicorn app:app --host 127.0.0.1 --port 8000
@@ -146,8 +136,6 @@ Benefits:
 
 ## 📁 Project Structure
 
-
-
 ```
 .
 ├── app.py             # FastAPI app and VK event handling
@@ -158,23 +146,6 @@ Benefits:
 ├── requirements.txt
 ├── .env               # Environment variables (do not commit!)
 └── bot.db             # SQLite database (created automatically)
-```
-
-## 🔒 Security
-
-- Never publish your `.env` file or tokens — add them to `.gitignore`.
-- The `VK_SECRET` validation protects the endpoint from unauthorized requests.
-- Use HTTPS for receiving webhooks.
-
-Example `.gitignore`:
-
-
-
-```
-.env
-bot.db
-__pycache__/
-venv/
 ```
 
 ## 📝 License
