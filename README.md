@@ -179,4 +179,4 @@ venv/
 
 ## 📝 License
 
-This project is distributed under the MIT License. See the [LICENSE](https://syntx.ai/ru/text/claude/LICENSE) file for details.
+This project is distributed under the MIT License.
